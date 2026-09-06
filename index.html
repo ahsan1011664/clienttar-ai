@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clientara AI — Autonomous AI Systems, CRM Systems & Workflow Automation</title>
+  <meta name="description"
+    content="Clientara AI builds intelligent AI automation, autonomous AI agents, AI chatbots, CRM systems, n8n/Zapier workflows, and custom web applications for high-growth businesses." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Clientara AI — AI Agents, Chatbots, CRM Systems & Intelligent Workflows" />
+  <meta property="og:description"
+    content="Deploy autonomous AI agents, smart chatbots, custom CRM pipelines, and automated workflows that streamline operations and drive business revenue." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300d4ff'><path d='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'/></svg>" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <link rel="stylesheet" href="/src/css/animations.css" />
+
+  <!-- Instant Pre-Render Check: Suppress splash glitch on page navigation -->
+  <script>
+    try {
+      if (sessionStorage.getItem('clientara_splash_shown')) {
+        document.documentElement.classList.add('splash-already-shown');
+      }
+    } catch (e) { }
+  </script>
+</head>
+
+<body>
+
+  <!-- ==========================================================================
+       CINEMATIC 3D STARTUP SPLASH SCREEN (3-4 SECONDS)
+       ========================================================================== -->
+  <div class="splash-screen" id="splashScreen" aria-label="Clientara AI Intro">
+    <!-- Ambient 3D Cyber Backdrop -->
+    <div class="splash-ambient-aura" aria-hidden="true"></div>
+    <div class="splash-grid-floor" aria-hidden="true"></div>
+
+    <!-- 3D Central Stage -->
+    <div class="splash-3d-stage">
+
+      <!-- 3D Hologram Gyro Rings -->
+      <div class="splash-gyro-wrapper" aria-hidden="true">
+        <div class="splash-ring splash-ring-1"></div>
+        <div class="splash-ring splash-ring-2"></div>
+        <div class="splash-ring splash-ring-3"></div>
+        <div class="splash-core-diamond">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- 3D Animated Startup Name -->
+      <div class="splash-brand-title">
+        <div class="splash-letters-wrap">
+          <span class="splash-char" style="animation-delay: 0.08s;">C</span>
+          <span class="splash-char" style="animation-delay: 0.14s;">l</span>
+          <span class="splash-char" style="animation-delay: 0.20s;">i</span>
+          <span class="splash-char" style="animation-delay: 0.26s;">e</span>
+          <span class="splash-char" style="animation-delay: 0.32s;">n</span>
+          <span class="splash-char" style="animation-delay: 0.38s;">t</span>
+          <span class="splash-char" style="animation-delay: 0.44s;">a</span>
+          <span class="splash-char" style="animation-delay: 0.50s;">r</span>
+          <span class="splash-char" style="animation-delay: 0.56s;">a</span>
+        </div>
+        <div class="splash-ai-badge">AI</div>
+      </div>
+
+      <!-- Minimalist 3D Progress Track -->
+      <div class="splash-progress-track">
+        <div class="splash-progress-bar"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Ambient Glowing Background Orbs -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="ambient-orb ambient-orb-1"></div>
+    <div class="ambient-orb ambient-orb-2"></div>
+    <div class="ambient-orb ambient-orb-3"></div>
+    <div class="grid-pattern"></div>
+  </div>
+
+  <!-- Main Floating Navigation Header -->
+  <header class="main-header" id="header">
+    <div class="header-container">
+
+      <!-- Brand Logo -->
+      <a href="#" class="brand-logo" aria-label="Clientara AI Home">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+            <path d="M2 17l10 5 10-5"></path>
+            <path d="M2 12l10 5 10-5"></path>
+          </svg>
+        </div>
+        <div class="brand-name">
+          Clientara <span>AI</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Action CTA -->
+      <div class="header-actions">
+        <a href="contact.html" class="btn-shimmer">
+          <span>Start a Project</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- ==========================================================================
+         HERO SECTION (2-Column Balanced Layout)
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+
+        <div class="hero-grid">
+
+          <!-- LEFT COLUMN: Content & CTAs (Max-width 580px) -->
+          <div class="hero-left">
+
+            <!-- Category Badge -->
+            <div class="hero-badge-container fade-in-up">
+              <span class="hero-badge-dot"></span>
+              <span class="hero-badge-text">AI Agents • Workflow Automation • CRM Systems</span>
+            </div>
+
+            <!-- Responsive Headline with clamp() -->
+            <h1 class="hero-title fade-in-up delay-1">
+              Autonomous AI Systems<br />
+              &amp; Workflows Built To<br />
+              <span class="text-gradient-electric">Scale Operations.</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="hero-subtitle fade-in-up delay-2">
+              <strong>Clientara AI</strong> builds autonomous systems that run your operations 24/7 — so your team stops
+              doing manual work and starts scaling.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="hero-actions fade-in-up delay-3">
+              <a href="contact.html" class="btn-shimmer btn-hero-primary">
+                <span>Book Free Consultation</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </a>
+
+              <a href="#services" class="btn-secondary btn-hero-secondary">
+                <span>Explore Solutions</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 17l9.2-9.2M17 17V7.8H7.8" />
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- RIGHT COLUMN: 3D Hologram Stage & Continuous Upright Orbiting Nodes -->
+          <div class="hero-right">
+            <div class="hologram-stage" id="hologramStage">
+
+              <!-- Orbital Radar Ring Track -->
+              <div class="cyber-radar-ring"></div>
+              <div class="cyber-radar-ring-2"></div>
+
+              <!-- 3D Gyroscope Globe -->
+              <div class="gyro-globe">
+                <div class="gyro-ring"></div>
+                <div class="gyro-ring"></div>
+                <div class="gyro-ring"></div>
+                <div class="gyro-ring"></div>
+                <div class="gyro-ring"></div>
+              </div>
+
+              <!-- Central AI Quantum Core -->
+              <div class="quantum-core">
+                <div class="quantum-core-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                    <path d="M2 17l10 5 10-5"></path>
+                    <path d="M2 12l10 5 10-5"></path>
+                  </svg>
+                </div>
+                <span class="quantum-core-label">AI ENGINE</span>
+              </div>
+
+              <!-- Orbit Container: 5 Nodes Orbiting in Continuous Upright Circle (Never Tilted) -->
+              <div class="orbit-system" id="orbitSystem">
+
+                <!-- Node 0: AI Agents & LLMs -->
+                <div class="orbital-pill pill-agents" id="orbitPill0">
+                  <div class="pill-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                      <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                      <line x1="12" x2="12" y1="19" y2="22" />
+                    </svg>
+                  </div>
+                  <div class="pill-content">
+                    <span class="pill-title">AI Agents &amp; LLMs</span>
+                    <span class="pill-tag">24/7 Autopilot</span>
+                  </div>
+                </div>
+
+                <!-- Node 1: Workflow Automation -->
+                <div class="orbital-pill pill-n8n" id="orbitPill1">
+                  <div class="pill-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="3" width="8" height="8" rx="2" />
+                      <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+                      <rect x="13" y="13" width="8" height="8" rx="2" />
+                    </svg>
+                  </div>
+                  <div class="pill-content">
+                    <span class="pill-title">Workflow Automation</span>
+                    <span class="pill-tag">No-Code &amp; Custom</span>
+                  </div>
+                </div>
+
+                <!-- Node 2: CRM Systems -->
+                <div class="orbital-pill pill-crm" id="orbitPill2">
+                  <div class="pill-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                      <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                      <path d="M3 12A9 3 0 0 0 21 12"></path>
+                    </svg>
+                  </div>
+                  <div class="pill-content">
+                    <span class="pill-title">CRM Systems</span>
+                    <span class="pill-tag">Auto Lead Pipelines</span>
+                  </div>
+                </div>
+
+                <!-- Node 3: Full-Stack Web Apps -->
+                <div class="orbital-pill pill-webapp" id="orbitPill3">
+                  <div class="pill-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="16 18 22 12 16 6" />
+                      <polyline points="8 6 2 12 8 18" />
+                    </svg>
+                  </div>
+                  <div class="pill-content">
+                    <span class="pill-title">Full-Stack Web Apps</span>
+                    <span class="pill-tag">High-Speed SaaS</span>
+                  </div>
+                </div>
+
+                <!-- Node 4: AI Chatbots -->
+                <div class="orbital-pill pill-chatbots" id="orbitPill4">
+                  <div class="pill-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                  </div>
+                  <div class="pill-content">
+                    <span class="pill-title">AI Chatbots</span>
+                    <span class="pill-tag">24/7 Conversations</span>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         METRICS / STATS CARDS SECTION — 4 STANDALONE LUXURY GLASS CARDS
+         ========================================================================== -->
+    <section class="hero-stats-section">
+      <div class="container">
+        <div class="stats-grid">
+
+          <!-- Card 01 -->
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <div class="stat-icon icon-blue">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                  <path d="M2 17l10 5 10-5"></path>
+                  <path d="M2 12l10 5 10-5"></path>
+                </svg>
+              </div>
+              <span class="stat-index">01</span>
+            </div>
+            <div class="stat-number">50<span class="stat-accent">+</span></div>
+            <div class="stat-title">Projects Delivered</div>
+            <p class="stat-desc">AI agents, chatbots, workflows &amp; SaaS deployed</p>
+          </div>
+
+          <!-- Card 02 -->
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <div class="stat-icon icon-emerald">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <span class="stat-index">02</span>
+            </div>
+            <div class="stat-number">98<span class="stat-accent">%</span></div>
+            <div class="stat-title">Client Satisfaction</div>
+            <p class="stat-desc">Proven operational ROI &amp; business scaling</p>
+          </div>
+
+          <!-- Card 03 -->
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <div class="stat-icon icon-purple">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 14 14"></polyline>
+                </svg>
+              </div>
+              <span class="stat-index">03</span>
+            </div>
+            <div class="stat-number">24<span class="stat-accent">/7</span></div>
+            <div class="stat-title">Autonomous Uptime</div>
+            <p class="stat-desc">Intelligent AI &amp; CRM pipelines running continuously</p>
+          </div>
+
+          <!-- Card 04 -->
+          <div class="stat-card">
+            <div class="stat-card-header">
+              <div class="stat-icon icon-cyan">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <span class="stat-index">04</span>
+            </div>
+            <div class="stat-number">&lt;0.8<span class="stat-accent">s</span></div>
+            <div class="stat-title">Avg AI Latency</div>
+            <p class="stat-desc">Instant reasoning &amp; real-time conversational responses</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION: SHOWCASE VIDEO (STANDALONE CLEAN SECTION)
+         ========================================================================== -->
+    <section class="team-video-section" id="showcase-video">
+      <div class="container">
+        <div class="team-video-container">
+          <!-- Cyber Glassmorphic Video Player Frame -->
+          <div class="team-video-frame">
+            <div class="video-wrapper" id="videoWrapper">
+              <video id="realTeamVideo" class="team-showcase-video" autoplay muted playsinline preload="metadata">
+                <source src="/videos/build_by_real_team.mp4" type="video/mp4">
+                <source src="build_by_real_team.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <!-- Center Play Badge (appears when paused/ended) -->
+              <div class="video-center-btn" id="videoCenterPlayBtn" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><polygon points="7 4 19 12 7 20 7 4"/></svg>
+              </div>
+              <div class="video-overlay-controls">
+                <button class="video-ctrl-btn" id="videoPlayPauseBtn" aria-label="Play or Pause Video">
+                  <svg id="iconPause" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                  <svg id="iconPlay" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display:none;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </button>
+                <button class="video-ctrl-btn" id="videoMuteBtn" aria-label="Mute or Unmute Video">
+                  <svg id="iconMuted" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/></svg>
+                  <svg id="iconUnmuted" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 2: CORE SERVICES SHOWCASE (#services)
+         ========================================================================== -->
+    <section class="services-section" id="services">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="section-badge-dot"></span>
+            <span>Core Capabilities</span>
+          </div>
+          <h2 class="section-title">Engineered to Automate &amp; Scale Every Business Function</h2>
+          <p class="section-subtitle">We build end-to-end autonomous infrastructure designed to eradicate repetitive
+            tasks, accelerate lead pipelines, and modernize your software stack.</p>
+        </div>
+
+        <div class="services-grid-wrapper">
+
+          <!-- Top Row: 3 Equal-Width Columns -->
+          <div class="services-grid-top">
+
+            <!-- Card 1: Autonomous AI Agents -->
+            <div class="service-card">
+              <div class="service-card-top">
+                <div class="service-badge-row">
+                  <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+                      <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+                      <line x1="12" x2="12" y1="19" y2="22" />
+                    </svg>
+                  </div>
+                  <span class="service-tag">AUTONOMOUS AI</span>
+                </div>
+                <h3 class="service-title">AI Agents That Work Independently</h3>
+                <p class="service-desc">AI that understands your business documents and data, makes decisions on its
+                  own, and handles complex tasks without needing constant supervision.</p>
+                <ul class="service-checklist">
+                  <li class="service-check-item">
+                    <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg></span>
+                    <span>Learns and references your company's own information</span>
+                  </li>
+                  <li class="service-check-item">
+                    <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg></span>
+                    <span>Takes action and completes multi-step tasks automatically</span>
+                  </li>
+                  <li class="service-check-item">
+                    <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg></span>
+                    <span>Remembers context, catches mistakes, and improves over time</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="service-footer-action">
+                <a href="contact.html" class="service-link">
+                  <span>Explore AI Agents</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 2: Workflow Automation -->
+            <div class="service-card">
+              <div class="service-card-top">
+                <div class="service-badge-row">
+                  <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="3" y="3" width="8" height="8" rx="2" />
+                      <path d="M7 11v4a2 2 0 0 0 2 2h4" />
+                      <rect x="13" y="13" width="8" height="8" rx="2" />
+                    </svg>
+                  </div>
+                  <span class="service-tag">PROCESS AUTOMATION</span>
+                </div>
+                <h3 class="service-title">End-to-End Workflow Automation</h3>
+                <p class="service-desc">Connect your everyday business tools so information flows automatically between
+                  them, eliminating repetitive data entry and manual handoffs.</p>
+                <ul class="service-checklist">
+                  <li class="service-check-item">
+                    <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg></span>
+                    <span>Extracts and processes invoices, documents, and forms instantly</span>
+                  </li>
+                  <li class="service-check-item">
+                    <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg></span>
+                    <span>Triggers alerts, task assignments, and customer updates automatically</span>
+                  </li>
+                  <li class="service-check-item">
+                    <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg></span>
+                    <span>Eliminates human error and saves dozens of team hours weekly</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="service-footer-action">
+                <a href="contact.html" class="service-link">
+                  <span>Automate Workflows</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 3: CRM Systems -->
+            <div class="service-card">
+              <div class="service-card-top">
+                <div class="service-badge-row">
+                  <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                      <path d="M3 5V19A9 3 0 0 0 21 19V5"></path>
+                      <path d="M3 12A9 3 0 0 0 21 12"></path>
+                    </svg>
+                  </div>
+                  <span class="service-tag">PIPELINE &amp; SALES</span>
+                </div>
+                <h3 class="service-title">Automated Lead &amp; Client Pipelines</h3>
+                <p class="service-desc">Keep your customer data, lead statuses, and sales activities automatically
+                  updated across your team without anyone typing in updates manually.</p>
+                <ul class="service-checklist">
+                  <li class="service-check-item">
+                    <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg></span>
+                    <span>Captures and qualifies inbound leads the second they arrive</span>
+                  </li>
+                  <li class="service-check-item">
+                    <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg></span>
+                    <span>Routes high-value prospects directly to the right team member</span>
+                  </li>
+                  <li class="service-check-item">
+                    <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg></span>
+                    <span>Gives leadership real-time visibility into every active deal</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="service-footer-action">
+                <a href="contact.html" class="service-link">
+                  <span>Upgrade Your Pipeline</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Bottom Row: 2 Equal-Width Columns, Centered -->
+          <div class="services-grid-bottom">
+
+            <!-- Card 4: Full-Stack Web Apps -->
+            <div class="service-card">
+              <div class="service-card-top">
+                <div class="service-badge-row">
+                  <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="16 18 22 12 16 6" />
+                      <polyline points="8 6 2 12 8 18" />
+                    </svg>
+                  </div>
+                  <span class="service-tag">CUSTOM SOFTWARE</span>
+                </div>
+                <h3 class="service-title">Custom Web Apps &amp; Client Portals</h3>
+                <p class="service-desc">Bespoke web applications, customer dashboards, and internal platforms built
+                  specifically around how your team and clients operate.</p>
+                <ul class="service-checklist">
+                  <li class="service-check-item">
+                    <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg></span>
+                    <span>Self-service client portals that reduce inbound support requests</span>
+                  </li>
+                  <li class="service-check-item">
+                    <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg></span>
+                    <span>Real-time management dashboards tailored to your exact metrics</span>
+                  </li>
+                  <li class="service-check-item">
+                    <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg></span>
+                    <span>Fast, secure platforms that scale effortlessly with your growth</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="service-footer-action">
+                <a href="contact.html" class="service-link">
+                  <span>Build Custom Software</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Card 5: Smart AI Chatbots -->
+            <div class="service-card">
+              <div class="service-card-top">
+                <div class="service-badge-row">
+                  <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                    </svg>
+                  </div>
+                  <span class="service-tag">24/7 SUPPORT &amp; SALES</span>
+                </div>
+                <h3 class="service-title">24/7 Smart Customer Chatbots</h3>
+                <p class="service-desc">Intelligent conversational assistants that answer questions with human-like
+                  nuance, qualify interested buyers, and schedule meetings around the clock.</p>
+                <ul class="service-checklist">
+                  <li class="service-check-item">
+                    <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg></span>
+                    <span>Answers customer inquiries instantly in multiple languages</span>
+                  </li>
+                  <li class="service-check-item">
+                    <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg></span>
+                    <span>Qualifies prospective buyers and collects key contact details</span>
+                  </li>
+                  <li class="service-check-item">
+                    <span class="check-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="3">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg></span>
+                    <span>Schedules meetings directly onto your team's calendar</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="service-footer-action">
+                <a href="contact.html" class="service-link">
+                  <span>Deploy Smart Chatbot</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 3: INDUSTRIES WE AUTOMATE (#industries)
+         ========================================================================== -->
+    <section class="industries-section" id="industries">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="section-badge-dot"></span>
+            <span>Tailored Sector Solutions</span>
+          </div>
+          <h2 class="section-title">Industries We Automate</h2>
+          <p class="section-subtitle">Custom autonomous architectures engineered specifically for the operational
+            workflows, compliance, and scaling requirements of your sector.</p>
+        </div>
+
+        <!-- 3D Master-Detail Interactive Showcase Container -->
+        <div class="industry-showcase-container">
+
+          <!-- LEFT COLUMN: Vertical Industry Tabs Menu -->
+          <div class="industry-sidebar-nav" role="tablist" aria-label="Industries Navigation">
+
+            <button class="industry-tab-btn active" data-industry-id="0" role="tab" aria-selected="true">
+              <span class="ind-tab-num">01</span>
+              <span class="ind-tab-name">E-Commerce &amp; Retail</span>
+              <span class="ind-tab-arrow">→</span>
+            </button>
+
+            <button class="industry-tab-btn" data-industry-id="1" role="tab" aria-selected="false">
+              <span class="ind-tab-num">02</span>
+              <span class="ind-tab-name">Real Estate</span>
+              <span class="ind-tab-arrow">→</span>
+            </button>
+
+            <button class="industry-tab-btn" data-industry-id="2" role="tab" aria-selected="false">
+              <span class="ind-tab-num">03</span>
+              <span class="ind-tab-name">Healthcare &amp; Clinics</span>
+              <span class="ind-tab-arrow">→</span>
+            </button>
+
+            <button class="industry-tab-btn" data-industry-id="3" role="tab" aria-selected="false">
+              <span class="ind-tab-num">04</span>
+              <span class="ind-tab-name">SaaS &amp; Startups</span>
+              <span class="ind-tab-arrow">→</span>
+            </button>
+
+            <button class="industry-tab-btn" data-industry-id="4" role="tab" aria-selected="false">
+              <span class="ind-tab-num">05</span>
+              <span class="ind-tab-name">Marketing Agencies</span>
+              <span class="ind-tab-arrow">→</span>
+            </button>
+
+            <button class="industry-tab-btn" data-industry-id="5" role="tab" aria-selected="false">
+              <span class="ind-tab-num">06</span>
+              <span class="ind-tab-name">Finance &amp; FinTech</span>
+              <span class="ind-tab-arrow">→</span>
+            </button>
+
+            <button class="industry-tab-btn" data-industry-id="6" role="tab" aria-selected="false">
+              <span class="ind-tab-num">07</span>
+              <span class="ind-tab-name">Legal Services</span>
+              <span class="ind-tab-arrow">→</span>
+            </button>
+
+            <button class="industry-tab-btn" data-industry-id="7" role="tab" aria-selected="false">
+              <span class="ind-tab-num">08</span>
+              <span class="ind-tab-name">Recruitment &amp; HR</span>
+              <span class="ind-tab-arrow">→</span>
+            </button>
+
+            <button class="industry-tab-btn" data-industry-id="8" role="tab" aria-selected="false">
+              <span class="ind-tab-num">09</span>
+              <span class="ind-tab-name">Consulting Firms</span>
+              <span class="ind-tab-arrow">→</span>
+            </button>
+
+            <button class="industry-tab-btn" data-industry-id="9" role="tab" aria-selected="false">
+              <span class="ind-tab-num">10</span>
+              <span class="ind-tab-name">Education &amp; EdTech</span>
+              <span class="ind-tab-arrow">→</span>
+            </button>
+
+          </div>
+
+          <!-- RIGHT COLUMN: 3D Holographic Visualizer & Detailed Deliverables -->
+          <div class="industry-detail-display">
+
+            <!-- 3D Holographic Stage with Animated Wireframe Cube & Floating Lucide Icon -->
+            <div class="industry-3d-stage" id="industry3dStage">
+
+              <!-- Subtle Background Cyber Grid -->
+              <div class="stage-cyber-grid"></div>
+
+              <!-- Left & Right Glowing Data Nodes -->
+              <span class="stage-side-node node-left"></span>
+              <span class="stage-side-node node-right"></span>
+              <div class="stage-beam-line"></div>
+
+              <!-- Center 3D Isometric Wireframe Cube & Floating Animated Icon -->
+              <div class="stage-cube-scene">
+                <!-- 3D Isometric Cube Container -->
+                <div class="wireframe-cube-3d">
+                  <div class="cube-face cube-front"></div>
+                  <div class="cube-face cube-back"></div>
+                  <div class="cube-face cube-right"></div>
+                  <div class="cube-face cube-left"></div>
+                  <div class="cube-face cube-top"></div>
+                  <div class="cube-face cube-bottom"></div>
+                </div>
+
+                <!-- Floating Illuminated Lucide SVG Icon in Center -->
+                <div class="floating-industry-icon" id="floatingIndustryIcon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" class="lucide-icon-display">
+                    <circle cx="8" cy="21" r="1"></circle>
+                    <circle cx="19" cy="21" r="1"></circle>
+                    <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
+                  </svg>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Industry Text Content & Deliverables Grid -->
+            <div class="industry-content-panel">
+
+              <div class="industry-content-header">
+                <span class="ind-category-tag" id="indCategoryTag">E-COMMERCE &amp; RETAIL</span>
+                <h3 class="ind-headline" id="indHeadline">Built for high-velocity online commerce</h3>
+                <p class="ind-description" id="indDescription">
+                  Automated cart recovery, 24/7 customer support, and real-time inventory sync.
+                </p>
+              </div>
+
+              <!-- WHAT WE BUILD -->
+              <div class="ind-build-section">
+                <div class="ind-deliverables-grid" id="indDeliverablesGrid">
+                  <div class="ind-deliverable-item">
+                    <span class="deliv-check">✓</span>
+                    <span>24/7 customer support</span>
+                  </div>
+                  <div class="ind-deliverable-item">
+                    <span class="deliv-check">✓</span>
+                    <span>Abandoned cart recovery</span>
+                  </div>
+                  <div class="ind-deliverable-item">
+                    <span class="deliv-check">✓</span>
+                    <span>Inventory synchronization</span>
+                  </div>
+                  <div class="ind-deliverable-item">
+                    <span class="deliv-check">✓</span>
+                    <span>Product recommendations</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 4: DYNAMIC ROI & TIME SAVINGS CALCULATOR (#calculator)
+         ========================================================================== -->
+    <section class="calculator-section" id="calculator">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="section-badge-dot"></span>
+            <span>Value Calculator</span>
+          </div>
+          <h2 class="section-title">Calculate Your Company's Operational ROI</h2>
+          <p class="section-subtitle">Discover how many hundreds of hours and thousands of dollars our automated AI
+            workflows save your business every single year.</p>
+        </div>
+
+        <div class="calculator-card">
+
+          <!-- Controls -->
+          <div class="calculator-inputs">
+
+            <div class="calc-control-group">
+              <div class="calc-label-row">
+                <label class="calc-label" for="teamSizeSlider">Team Members Doing Manual Tasks</label>
+                <span class="calc-val-display" id="teamSizeDisplay">8 people</span>
+              </div>
+              <input type="range" id="teamSizeSlider" class="calc-slider" min="1" max="50" value="8" />
+            </div>
+
+            <div class="calc-control-group">
+              <div class="calc-label-row">
+                <label class="calc-label" for="hoursSlider">Manual Hours Spent Per Person / Week</label>
+                <span class="calc-val-display" id="hoursDisplay">12 hrs/wk</span>
+              </div>
+              <input type="range" id="hoursSlider" class="calc-slider" min="2" max="40" value="12" />
+            </div>
+
+            <div class="calc-control-group">
+              <div class="calc-label-row">
+                <label class="calc-label" for="rateSlider">Average Blended Hourly Cost ($)</label>
+                <span class="calc-val-display" id="rateDisplay">$45 / hr</span>
+              </div>
+              <input type="range" id="rateSlider" class="calc-slider" min="20" max="150" value="45" step="5" />
+            </div>
+
+          </div>
+
+          <!-- Dynamic Output Results -->
+          <div class="calculator-results-box">
+            <div class="calc-metric-item">
+              <span class="calc-metric-label">Estimated Hours Saved / Month</span>
+              <span class="calc-metric-number" id="calcHoursSaved">288 hrs</span>
+            </div>
+
+            <div class="calc-metric-item">
+              <span class="calc-metric-label">Annual Projected Cost Savings</span>
+              <span class="calc-metric-number metric-savings" id="calcAnnualSavings">$155,520</span>
+            </div>
+
+            <div class="calc-metric-item">
+              <span class="calc-metric-label">Estimated 3-Month ROI Multiple</span>
+              <span class="calc-metric-number metric-roi" id="calcRoiMultiple">9.2x ROI</span>
+            </div>
+
+            <a href="contact.html" class="btn-shimmer" style="width:100%; text-align:center; padding:12px;">
+              <span>Claim These Savings with AI</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 5: 4-STEP TRANSFORMATION ROADMAP (#about / #process)
+         ========================================================================== -->
+    <section class="process-section" id="about">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="section-badge-dot"></span>
+            <span>How We Work</span>
+          </div>
+          <h2 class="section-title">A 4-Step Roadmap from Manual Chaos to Full Autopilot</h2>
+          <p class="section-subtitle">We handle the entire end-to-end engineering lifecycle from discovery audit to live
+            deployment with zero disruption to your daily operations.</p>
+        </div>
+
+        <div class="process-grid">
+
+          <div class="process-card">
+            <div class="process-step-header">
+              <span class="process-num">01</span>
+              <div class="process-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+              </div>
+            </div>
+            <h3 class="process-title">Discovery &amp; Free AI Audit</h3>
+            <p class="process-desc">We analyze your existing software stack, map out operational bottlenecks, and
+              identify the highest ROI automation opportunities.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-step-header">
+              <span class="process-num">02</span>
+              <div class="process-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                  <polyline points="2 17 12 22 22 17"></polyline>
+                  <polyline points="2 12 12 17 22 12"></polyline>
+                </svg>
+              </div>
+            </div>
+            <h3 class="process-title">Architecture Blueprint</h3>
+            <p class="process-desc">We design a custom automation plan tailored exactly to your business logic — mapping
+              out how every system will connect and work together before we build.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-step-header">
+              <span class="process-num">03</span>
+              <div class="process-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+            </div>
+            <h3 class="process-title">Rapid Build &amp; Deployment</h3>
+            <p class="process-desc">We build and thoroughly test every system, then deploy it into your business with
+              zero downtime and no disruption to your daily operations.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-step-header">
+              <span class="process-num">04</span>
+              <div class="process-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+            </div>
+            <h3 class="process-title">24/7 Monitoring &amp; Scaling</h3>
+            <p class="process-desc">We continuously monitor performance, fine-tune your systems for accuracy, and scale
+              everything as your business grows.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 6: CLIENT RESULTS & REAL OUTCOMES (#work)
+         ========================================================================== -->
+    <section class="work-section" id="work">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="section-badge-dot"></span>
+            <span>Client Results</span>
+          </div>
+          <h2 class="section-title">Real Businesses, Real Outcomes</h2>
+          <p class="section-subtitle">Every number below comes from an actual client. No stock photos, no invented
+            metrics.</p>
+        </div>
+
+      </div>
+
+      <!-- Continuous Smooth Horizontal Marquee -->
+      <div class="results-marquee-wrapper" id="resultsMarquee">
+        <div class="results-marquee-track">
+
+          <!-- Card 01: Hassan Malik -->
+          <div class="result-card">
+            <div class="result-quote-icon icon-purple">“ ”</div>
+            <p class="result-text">“We had 40+ client accounts and a 3-person team drowning in manual report generation
+              every week. Clientara AI built us an automated data-reporting pipeline — reports now go out every Monday
+              at 8am without anyone touching anything. Freed up nearly 2 full days a week for actual strategy.”</p>
+            <div class="result-metric-pill pill-purple">
+              <span>✦ 16 hrs saved / week</span>
+            </div>
+            <div class="result-author-row">
+              <div class="result-author-left">
+                <div class="result-avatar avatar-purple">HM</div>
+                <div class="result-author-info">
+                  <span class="result-author-name">Hassan Malik</span>
+                  <span class="result-author-role">Co-Founder &amp; COO, Spark Digital • Lahore</span>
+                </div>
+              </div>
+              <div class="result-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <!-- Card 02: Emily Thornton -->
+          <div class="result-card">
+            <div class="result-quote-icon icon-purple">“ ”</div>
+            <p class="result-text">“Our abandoned cart emails were being sent manually — embarrassing, I know. Clientara
+              AI built a full AI sequence with personalization. We went from recovering maybe £2k a month to over £11k.
+              The payback on their fee was instant.”</p>
+            <div class="result-metric-pill pill-purple">
+              <span>✦ +£9k/mo revenue added</span>
+            </div>
+            <div class="result-author-row">
+              <div class="result-author-left">
+                <div class="result-avatar avatar-purple">ET</div>
+                <div class="result-author-info">
+                  <span class="result-author-name">Emily Thornton</span>
+                  <span class="result-author-role">Head of E-Commerce, Bloom &amp; Co. • London</span>
+                </div>
+              </div>
+              <div class="result-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <!-- Card 03: Ravi Anand -->
+          <div class="result-card">
+            <div class="result-quote-icon icon-cyan">“ ”</div>
+            <p class="result-text">“Enterprise onboarding used to take our team 10–14 days per client. After Clientara
+              AI rebuilt the flow, it's 3 days. Support tickets from new users dropped by 60%. The system is rock solid
+              — hasn't needed a single intervention in 4 months.”</p>
+            <div class="result-metric-pill pill-cyan">
+              <span>✦ 80% faster onboarding</span>
+            </div>
+            <div class="result-author-row">
+              <div class="result-author-left">
+                <div class="result-avatar avatar-cyan">RA</div>
+                <div class="result-author-info">
+                  <span class="result-author-name">Ravi Anand</span>
+                  <span class="result-author-role">CTO, Paylane • Bangalore</span>
+                </div>
+              </div>
+              <div class="result-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <!-- Card 04: Marcus Vance -->
+          <div class="result-card">
+            <div class="result-quote-icon icon-amber">“ ”</div>
+            <p class="result-text">“Processing 1,400 monthly freight invoices used to require 2 full-time admins
+              manually cross-referencing PDFs. Clientara AI automated the entire document extraction and QuickBooks
+              sync. Zero errors and 94% faster invoice cycles.”</p>
+            <div class="result-metric-pill pill-amber">
+              <span>✦ 94% faster invoice cycles</span>
+            </div>
+            <div class="result-author-row">
+              <div class="result-author-left">
+                <div class="result-avatar avatar-amber">MV</div>
+                <div class="result-author-info">
+                  <span class="result-author-name">Marcus Vance</span>
+                  <span class="result-author-role">VP of Operations, Apex Logistics • Berlin</span>
+                </div>
+              </div>
+              <div class="result-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <!-- Card 05: Sarah Jenkins -->
+          <div class="result-card">
+            <div class="result-quote-icon icon-purple">“ ”</div>
+            <p class="result-text">“We were losing after-hours buyers because our agents couldn't reply fast enough.
+              Clientara AI deployed an intelligent AI agent that qualifies buyers and books showings directly onto our
+              Google Calendar. Our bookings tripled in 30 days.”</p>
+            <div class="result-metric-pill pill-purple">
+              <span>✦ 3x meeting booking rate</span>
+            </div>
+            <div class="result-author-row">
+              <div class="result-author-left">
+                <div class="result-avatar avatar-purple">SJ</div>
+                <div class="result-author-info">
+                  <span class="result-author-name">Sarah Jenkins</span>
+                  <span class="result-author-role">Managing Director, Elevation Real Estate • Austin</span>
+                </div>
+              </div>
+              <div class="result-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <!-- Card 06: Dr. Tariq Al-Mansoor -->
+          <div class="result-card">
+            <div class="result-quote-icon icon-teal">“ ”</div>
+            <p class="result-text">“Patient registration across our 6 clinics was creating reception bottlenecks.
+              Clientara AI deployed a multi-language intake chatbot that verifies patient files and synchronizes CRM
+              data instantly. Reception wait times dropped to zero.”</p>
+            <div class="result-metric-pill pill-teal">
+              <span>✦ 100% automated intake</span>
+            </div>
+            <div class="result-author-row">
+              <div class="result-author-left">
+                <div class="result-avatar avatar-teal">TA</div>
+                <div class="result-author-info">
+                  <span class="result-author-name">Dr. Tariq Al-Mansoor</span>
+                  <span class="result-author-role">Director of Operations, MedCare • Dubai</span>
+                </div>
+              </div>
+              <div class="result-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <!-- Card 07: David Lindqvist -->
+          <div class="result-card">
+            <div class="result-quote-icon icon-cyan">“ ”</div>
+            <p class="result-text">“Clientara AI built an autonomous lead enrichment agent connected to our HubSpot and
+              Slack. High-intent demo requests are scored, enriched, and routed to sales reps within 3 seconds of
+              submission. Truly exceptional engineering.”</p>
+            <div class="result-metric-pill pill-cyan">
+              <span>✦ 4.6x pipeline velocity</span>
+            </div>
+            <div class="result-author-row">
+              <div class="result-author-left">
+                <div class="result-avatar avatar-cyan">DL</div>
+                <div class="result-author-info">
+                  <span class="result-author-name">David Lindqvist</span>
+                  <span class="result-author-role">Founder, MetricFlow SaaS • Stockholm</span>
+                </div>
+              </div>
+              <div class="result-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <!-- ================= DUPLICATE SET FOR SEAMLESS 100% GAPLESS LOOP ================= -->
+
+          <!-- Card 01 Duplicate -->
+          <div class="result-card" aria-hidden="true">
+            <div class="result-quote-icon icon-purple">“ ”</div>
+            <p class="result-text">“We had 40+ client accounts and a 3-person team drowning in manual report generation
+              every week. Clientara AI built us an automated data-reporting pipeline — reports now go out every Monday
+              at 8am without anyone touching anything. Freed up nearly 2 full days a week for actual strategy.”</p>
+            <div class="result-metric-pill pill-purple">
+              <span>✦ 16 hrs saved / week</span>
+            </div>
+            <div class="result-author-row">
+              <div class="result-author-left">
+                <div class="result-avatar avatar-purple">HM</div>
+                <div class="result-author-info">
+                  <span class="result-author-name">Hassan Malik</span>
+                  <span class="result-author-role">Co-Founder &amp; COO, Spark Digital • Lahore</span>
+                </div>
+              </div>
+              <div class="result-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <!-- Card 02 Duplicate -->
+          <div class="result-card" aria-hidden="true">
+            <div class="result-quote-icon icon-purple">“ ”</div>
+            <p class="result-text">“Our abandoned cart emails were being sent manually — embarrassing, I know. Clientara
+              AI built a full AI sequence with personalization. We went from recovering maybe £2k a month to over £11k.
+              The payback on their fee was instant.”</p>
+            <div class="result-metric-pill pill-purple">
+              <span>✦ +£9k/mo revenue added</span>
+            </div>
+            <div class="result-author-row">
+              <div class="result-author-left">
+                <div class="result-avatar avatar-purple">ET</div>
+                <div class="result-author-info">
+                  <span class="result-author-name">Emily Thornton</span>
+                  <span class="result-author-role">Head of E-Commerce, Bloom &amp; Co. • London</span>
+                </div>
+              </div>
+              <div class="result-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <!-- Card 03 Duplicate -->
+          <div class="result-card" aria-hidden="true">
+            <div class="result-quote-icon icon-cyan">“ ”</div>
+            <p class="result-text">“Enterprise onboarding used to take our team 10–14 days per client. After Clientara
+              AI rebuilt the flow, it's 3 days. Support tickets from new users dropped by 60%. The system is rock solid
+              — hasn't needed a single intervention in 4 months.”</p>
+            <div class="result-metric-pill pill-cyan">
+              <span>✦ 80% faster onboarding</span>
+            </div>
+            <div class="result-author-row">
+              <div class="result-author-left">
+                <div class="result-avatar avatar-cyan">RA</div>
+                <div class="result-author-info">
+                  <span class="result-author-name">Ravi Anand</span>
+                  <span class="result-author-role">CTO, Paylane • Bangalore</span>
+                </div>
+              </div>
+              <div class="result-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <!-- Card 04 Duplicate -->
+          <div class="result-card" aria-hidden="true">
+            <div class="result-quote-icon icon-amber">“ ”</div>
+            <p class="result-text">“Processing 1,400 monthly freight invoices used to require 2 full-time admins
+              manually cross-referencing PDFs. Clientara AI automated the entire document extraction and QuickBooks
+              sync. Zero errors and 94% faster invoice cycles.”</p>
+            <div class="result-metric-pill pill-amber">
+              <span>✦ 94% faster invoice cycles</span>
+            </div>
+            <div class="result-author-row">
+              <div class="result-author-left">
+                <div class="result-avatar avatar-amber">MV</div>
+                <div class="result-author-info">
+                  <span class="result-author-name">Marcus Vance</span>
+                  <span class="result-author-role">VP of Operations, Apex Logistics • Berlin</span>
+                </div>
+              </div>
+              <div class="result-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <!-- Card 05 Duplicate -->
+          <div class="result-card" aria-hidden="true">
+            <div class="result-quote-icon icon-purple">“ ”</div>
+            <p class="result-text">“We were losing after-hours buyers because our agents couldn't reply fast enough.
+              Clientara AI deployed an intelligent AI agent that qualifies buyers and books showings directly onto our
+              Google Calendar. Our bookings tripled in 30 days.”</p>
+            <div class="result-metric-pill pill-purple">
+              <span>✦ 3x meeting booking rate</span>
+            </div>
+            <div class="result-author-row">
+              <div class="result-author-left">
+                <div class="result-avatar avatar-purple">SJ</div>
+                <div class="result-author-info">
+                  <span class="result-author-name">Sarah Jenkins</span>
+                  <span class="result-author-role">Managing Director, Elevation Real Estate • Austin</span>
+                </div>
+              </div>
+              <div class="result-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <!-- Card 06 Duplicate -->
+          <div class="result-card" aria-hidden="true">
+            <div class="result-quote-icon icon-teal">“ ”</div>
+            <p class="result-text">“Patient registration across our 6 clinics was creating reception bottlenecks.
+              Clientara AI deployed a multi-language intake chatbot that verifies patient files and synchronizes CRM
+              data instantly. Reception wait times dropped to zero.”</p>
+            <div class="result-metric-pill pill-teal">
+              <span>✦ 100% automated intake</span>
+            </div>
+            <div class="result-author-row">
+              <div class="result-author-left">
+                <div class="result-avatar avatar-teal">TA</div>
+                <div class="result-author-info">
+                  <span class="result-author-name">Dr. Tariq Al-Mansoor</span>
+                  <span class="result-author-role">Director of Operations, MedCare • Dubai</span>
+                </div>
+              </div>
+              <div class="result-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <!-- Card 07 Duplicate -->
+          <div class="result-card" aria-hidden="true">
+            <div class="result-quote-icon icon-cyan">“ ”</div>
+            <p class="result-text">“Clientara AI built an autonomous lead enrichment agent connected to our HubSpot and
+              Slack. High-intent demo requests are scored, enriched, and routed to sales reps within 3 seconds of
+              submission. Truly exceptional engineering.”</p>
+            <div class="result-metric-pill pill-cyan">
+              <span>✦ 4.6x pipeline velocity</span>
+            </div>
+            <div class="result-author-row">
+              <div class="result-author-left">
+                <div class="result-avatar avatar-cyan">DL</div>
+                <div class="result-author-info">
+                  <span class="result-author-name">David Lindqvist</span>
+                  <span class="result-author-role">Founder, MetricFlow SaaS • Stockholm</span>
+                </div>
+              </div>
+              <div class="result-stars">★★★★★</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 7: INTERACTIVE FAQ ACCORDION (#faq)
+         ========================================================================== -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="section-badge-dot"></span>
+            <span>Frequently Asked Questions</span>
+          </div>
+          <h2 class="section-title">Everything You Need to Know</h2>
+          <p class="section-subtitle">Clear answers to common questions about our AI systems, security protocols, and
+            timelines.</p>
+        </div>
+
+        <div class="faq-container">
+
+          <div class="faq-item active">
+            <button class="faq-question-btn" aria-expanded="true">
+              <span>How fast can Clientara AI deploy our first automated system?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-content">
+              <p>Most automation pipelines (n8n, Zapier, CRM integrations, and smart chatbots) are fully built, tested,
+                and deployed live within <strong>7 to 14 business days</strong>. Complex autonomous multi-agent systems
+                and custom full-stack web applications typically take 2 to 4 weeks.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>Do we need to replace our current software stack (HubSpot, Slack, etc.)?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-content">
+              <p>No! We build non-disruptive layer architectures that integrate directly with your existing tools —
+                including HubSpot, Salesforce, Slack, Notion, Airtable, Google Workspace, Stripe, and QuickBooks.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>How is data privacy and enterprise security handled?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-content">
+              <p>We use enterprise zero-data-retention API endpoints (OpenAI / Anthropic Enterprise) and dedicated
+                private VPC / on-premise deployments when required. Your proprietary business data is never used to
+                train public foundational models.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>What happens if an API or third-party workflow changes in the future?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-content">
+              <p>We provide ongoing monitoring and maintenance packages that include 24/7 uptime watchdogs, automatic
+                webhook error alerts, and free patches whenever third-party APIs update their schemas.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question-btn" aria-expanded="false">
+              <span>What is the investment required for custom AI &amp; automation?</span>
+              <span class="faq-toggle-icon">+</span>
+            </button>
+            <div class="faq-answer-content">
+              <p>We offer transparent project-based packages and monthly retainer partnerships. Every project starts
+                with a <strong>100% Free AI Architecture Audit</strong> where we identify your exact ROI before you
+                commit to any development.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SECTION 8: START YOUR TRANSFORMATION CTA (#transformation-cta)
+         ========================================================================== -->
+    <section class="transformation-section" id="transformation-cta">
+      <div class="container">
+
+        <div class="transformation-card">
+
+          <!-- Animated Concentric Radar & Sonar Sweep -->
+          <div class="transformation-radar-container">
+            <div class="radar-ring radar-ring-1"></div>
+            <div class="radar-ring radar-ring-2"></div>
+            <div class="radar-ring radar-ring-3"></div>
+            <div class="radar-sweep-beam"></div>
+          </div>
+
+          <!-- Content Wrapper -->
+          <div class="transformation-content">
+
+            <div class="transformation-badge">
+              <span class="transformation-badge-dot"></span>
+              <span>FREE 30-MIN STRATEGY CALL</span>
+            </div>
+
+            <h2 class="transformation-title">
+              Stop losing revenue to<br>
+              <span class="transformation-highlight">manual processes</span>
+            </h2>
+
+            <p class="transformation-subtitle">
+              One call. We map your bottlenecks and show exactly what automation reclaims for you.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="transformation-actions">
+              <a href="contact.html" class="btn-transformation-primary" id="transformationBookBtn">
+                <span>Book Free Consultation</span>
+                <span class="btn-arrow-icon">→</span>
+              </a>
+              <a href="services.html" class="btn-transformation-secondary" id="transformationServicesBtn">
+                <span>Explore Services</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       ENTERPRISE LUXURY FOOTER
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <a href="#" class="brand-logo" aria-label="Clientara AI">
+            <div class="logo-symbol">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <div class="brand-name">
+              Clientara <span>AI</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Deploying autonomous AI agents, workflow automation pipelines, and custom software systems that eliminate
+            manual bottlenecks for high-growth businesses.
+          </p>
+          <div class="footer-beacon-status">
+            <span class="status-dot"></span>
+            <span>SYSTEMS ONLINE (99.98% UPTIME)</span>
+          </div>
+        </div>
+
+        <!-- Column 2: Services -->
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="services.html#service-agents" class="footer-link">Autonomous AI Agents</a></li>
+            <li><a href="services.html#service-workflows" class="footer-link">Workflow Automation</a></li>
+            <li><a href="services.html#service-crm" class="footer-link">Custom CRM Systems</a></li>
+            <li><a href="services.html#service-webapps" class="footer-link">Full-Stack Web Apps</a></li>
+            <li><a href="services.html#service-chatbots" class="footer-link">24/7 Smart Chatbots</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Our Company -->
+        <div>
+          <h4 class="footer-col-title">Our Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="work.html" class="footer-link">Case Studies</a></li>
+            <li><a href="about.html" class="footer-link">About Us</a></li>
+            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Connect -->
+        <div>
+          <h4 class="footer-col-title">Connect</h4>
+          <p style="font-size:12.5px; color:var(--text-muted); margin-bottom:12px;">Let's build your enterprise
+            automation infrastructure.</p>
+          <a href="contact.html" class="btn-secondary" style="font-size:11.5px; padding:7px 16px;">
+            <span>Book Strategy Call</span>
+          </a>
+          <div class="footer-social-row" style="margin-top: 14px;">
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <span>&copy; 2026 Clientara AI Inc. All rights reserved.</span>
+        <span>Enterprise AI Automation &amp; Intelligent Workflow Architecture.</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PERSISTENT FIXED FLOATING LIVE ACTIVITY TOAST (BOTTOM-LEFT ACROSS ENTIRE SITE)
+       ========================================================================== -->
+  <aside class="fixed-live-toast" id="liveToast" aria-live="polite">
+    <span class="toast-beacon"></span>
+    <div class="toast-icon icon-agent" id="toastIconContainer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="toastIconSvg">
+        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" />
+        <path d="M19 10v2a7 7 0 0 1-14 0v-2" />
+        <line x1="12" x2="12" y1="19" y2="22" />
+      </svg>
+    </div>
+    <div class="toast-content">
+      <span class="toast-msg" id="toastMsg">Marketing agency in Lahore automated CRM lead pipeline</span>
+      <div class="toast-meta">
+        <span id="toastTime">Just now</span>
+        <span class="toast-meta-dot">•</span>
+        <span id="toastTag">CRM Systems</span>
+      </div>
+    </div>
+    <button class="toast-close" id="toastCloseBtn" aria-label="Dismiss notification">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+        stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+  </aside>
+
+  <!-- ==========================================================================
+       SIDE FLOATING WHATSAPP BUTTON (DIRECT CHAT: +92 318 0404335)
+       ========================================================================== -->
+  <a href="https://wa.me/923180404335?text=Hello%20Clientara%20AI%2C%20I%20am%20interested%20in%20your%20services."
+    class="whatsapp-floating-btn" target="_blank" rel="noopener noreferrer"
+    aria-label="Chat with Clientara AI on WhatsApp">
+    <div class="whatsapp-btn-pulse"></div>
+    <div class="whatsapp-icon-box">
+      <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor">
+        <path
+          d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.39-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24M8.53 7.33c-.2 0-.43.08-.66.33-.23.25-.88.86-.88 2.1s.9 2.43 1.03 2.6c.12.16 1.77 2.7 4.29 3.78.6.26 1.07.41 1.44.53.6.19 1.15.16 1.59.1.48-.07 1.48-.6 1.69-1.19.21-.58.21-1.09.15-1.19-.06-.11-.23-.17-.48-.29s-1.48-.73-1.71-.81c-.23-.09-.4-.13-.56.13-.17.25-.66.81-.81.98-.15.17-.3.19-.55.07-.25-.13-1.07-.39-2.03-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.38-.44.12-.15.17-.25.25-.42.08-.17.04-.32-.02-.44-.06-.13-.56-1.36-.77-1.86-.2-.49-.41-.42-.56-.43z" />
+      </svg>
+    </div>
+  </a>
+
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+
+</html>
