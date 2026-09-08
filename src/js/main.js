@@ -230,100 +230,7 @@ function initClientaraApp() {
   }
 
   // ==========================================================================
-  // 4. PERSISTENT FLOATING LIVE ACTIVITY TOAST
-  // ==========================================================================
-  try {
-    const liveToast = document.getElementById('liveToast');
-    const toastMsg = document.getElementById('toastMsg');
-    const toastTime = document.getElementById('toastTime');
-    const toastTag = document.getElementById('toastTag');
-    const toastIconContainer = document.getElementById('toastIconContainer');
-    const toastCloseBtn = document.getElementById('toastCloseBtn');
-
-    const iconSvgs = {
-      agent: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg>`,
-      chatbots: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>`,
-      workflow: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="8" height="8" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg>`,
-      crm: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5V19A9 3 0 0 0 21 19V5"></path><path d="M3 12A9 3 0 0 0 21 12"></path></svg>`,
-      webapp: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`
-    };
-
-    const liveActivities = [
-      { type: 'crm', msg: 'A SaaS platform requested CRM automation', time: 'Just now', tag: 'CRM Systems' },
-      { type: 'agent', msg: 'Sarah from London booked a query call', time: '2 min ago', tag: 'AI Strategy' },
-      { type: 'chatbots', msg: 'An e-commerce brand deployed a 24/7 AI chatbot', time: '4 min ago', tag: 'AI Chatbots' },
-      { type: 'workflow', msg: 'Marcus from Berlin requested workflow automation', time: '7 min ago', tag: 'Workflows' },
-      { type: 'agent', msg: 'A healthcare group deployed an autonomous AI agent', time: '11 min ago', tag: 'AI Agents' },
-      { type: 'webapp', msg: 'David from Toronto launched a custom client portal', time: '15 min ago', tag: 'Web App' },
-      { type: 'crm', msg: 'A marketing agency synchronized CRM lead pipeline', time: '19 min ago', tag: 'CRM Pipeline' },
-      { type: 'chatbots', msg: 'Elena from Madrid booked a consultation call', time: '24 min ago', tag: 'Consultation' },
-      { type: 'workflow', msg: 'A logistics provider automated invoice workflows', time: '31 min ago', tag: 'Automation' },
-      { type: 'agent', msg: 'Alex from Sydney booked a free AI audit', time: '38 min ago', tag: 'Free Audit' }
-    ];
-
-    let currentActivityIndex = 0;
-
-    if (liveToast && toastMsg && toastTime && toastTag && toastIconContainer) {
-      setTimeout(() => {
-        const initial = liveActivities[0];
-        toastMsg.textContent = initial.msg;
-        toastTime.textContent = initial.time;
-        toastTag.textContent = initial.tag;
-        toastIconContainer.className = `toast-icon icon-${initial.type}`;
-        toastIconContainer.innerHTML = iconSvgs[initial.type] || iconSvgs.agent;
-
-        liveToast.classList.add('toast-visible');
-      }, 2500);
-
-      const updateToast = () => {
-        if (liveToast.classList.contains('toast-hidden')) return;
-
-        currentActivityIndex = (currentActivityIndex + 1) % liveActivities.length;
-        const current = liveActivities[currentActivityIndex];
-
-        toastMsg.style.opacity = '0';
-        toastMsg.style.transform = 'translateY(4px)';
-        toastTime.style.opacity = '0';
-        toastTag.style.opacity = '0';
-
-        setTimeout(() => {
-          toastMsg.textContent = current.msg;
-          toastTime.textContent = current.time;
-          toastTag.textContent = current.tag;
-
-          toastIconContainer.className = `toast-icon icon-${current.type}`;
-          toastIconContainer.innerHTML = iconSvgs[current.type] || iconSvgs.agent;
-
-          toastMsg.style.opacity = '1';
-          toastMsg.style.transform = 'translateY(0)';
-          toastTime.style.opacity = '1';
-          toastTag.style.opacity = '1';
-        }, 250);
-      };
-
-      let toastInterval = setInterval(updateToast, 5000);
-
-      if (toastCloseBtn) {
-        toastCloseBtn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          liveToast.classList.remove('toast-visible');
-          liveToast.classList.add('toast-hidden');
-          clearInterval(toastInterval);
-
-          setTimeout(() => {
-            liveToast.classList.remove('toast-hidden');
-            liveToast.classList.add('toast-visible');
-            toastInterval = setInterval(updateToast, 5000);
-          }, 30000);
-        });
-      }
-    }
-  } catch (err) {
-    console.error('Toast init error:', err);
-  }
-
-  // ==========================================================================
-  // 5. DYNAMIC ROI CALCULATOR
+  // 4. DYNAMIC ROI CALCULATOR
   // ==========================================================================
   try {
     const teamSlider = document.getElementById('teamSizeSlider');
@@ -341,9 +248,9 @@ function initClientaraApp() {
     const updateRoiCalculations = () => {
       if (!teamSlider || !hoursSlider || !rateSlider) return;
 
-      const teamSize = parseInt(teamSlider.value, 10) || 8;
-      const weeklyHours = parseInt(hoursSlider.value, 10) || 12;
-      const hourlyRate = parseInt(rateSlider.value, 10) || 45;
+      const teamSize = parseInt(teamSlider.value, 10) || 5;
+      const weeklyHours = parseInt(hoursSlider.value, 10) || 10;
+      const hourlyRate = parseInt(rateSlider.value, 10) || 30;
 
       if (teamDisplay) teamDisplay.textContent = `${teamSize} ${teamSize === 1 ? 'person' : 'people'}`;
       if (hoursDisplay) hoursDisplay.textContent = `${weeklyHours} hrs/wk`;
