@@ -22,64 +22,9 @@
   <link rel="stylesheet" href="/src/css/style.css" />
   <link rel="stylesheet" href="/src/css/animations.css" />
 
-  <!-- Instant Pre-Render Check: Suppress splash glitch on page navigation -->
-  <script>
-    try {
-      if (sessionStorage.getItem('clientara_splash_shown')) {
-        document.documentElement.classList.add('splash-already-shown');
-      }
-    } catch (e) { }
-  </script>
 </head>
 
 <body>
-
-  <!-- ==========================================================================
-       CINEMATIC 3D STARTUP SPLASH SCREEN (3-4 SECONDS)
-       ========================================================================== -->
-  <div class="splash-screen" id="splashScreen" aria-label="Clientara AI Intro">
-    <!-- Ambient 3D Cyber Backdrop -->
-    <div class="splash-ambient-aura" aria-hidden="true"></div>
-    <div class="splash-grid-floor" aria-hidden="true"></div>
-
-    <!-- 3D Central Stage -->
-    <div class="splash-3d-stage">
-
-      <!-- 3D Hologram Gyro Rings -->
-      <div class="splash-gyro-wrapper" aria-hidden="true">
-        <div class="splash-ring splash-ring-1"></div>
-        <div class="splash-ring splash-ring-2"></div>
-        <div class="splash-ring splash-ring-3"></div>
-        <div class="splash-core-diamond">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-          </svg>
-        </div>
-      </div>
-
-      <!-- 3D Animated Startup Name -->
-      <div class="splash-brand-title">
-        <div class="splash-letters-wrap">
-          <span class="splash-char" style="animation-delay: 0.08s;">C</span>
-          <span class="splash-char" style="animation-delay: 0.14s;">l</span>
-          <span class="splash-char" style="animation-delay: 0.20s;">i</span>
-          <span class="splash-char" style="animation-delay: 0.26s;">e</span>
-          <span class="splash-char" style="animation-delay: 0.32s;">n</span>
-          <span class="splash-char" style="animation-delay: 0.38s;">t</span>
-          <span class="splash-char" style="animation-delay: 0.44s;">a</span>
-          <span class="splash-char" style="animation-delay: 0.50s;">r</span>
-          <span class="splash-char" style="animation-delay: 0.56s;">a</span>
-        </div>
-        <div class="splash-ai-badge">AI</div>
-      </div>
-
-      <!-- Minimalist 3D Progress Track -->
-      <div class="splash-progress-track">
-        <div class="splash-progress-bar"></div>
-      </div>
-
-    </div>
-  </div>
 
   <!-- Ambient Glowing Background Orbs -->
   <div class="bg-ambient" aria-hidden="true">
@@ -92,9 +37,10 @@
   <!-- Main Floating Navigation Header -->
   <header class="main-header" id="header">
     <div class="header-container">
+      <div class="header-content">
 
       <!-- Brand Logo -->
-      <a href="#" class="brand-logo" aria-label="Clientara AI Home">
+      <a href="index.html" class="brand-logo" aria-label="Clientara AI Home">
         <div class="logo-symbol">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
             stroke-linejoin="round">
@@ -109,7 +55,7 @@
       </a>
 
       <!-- Desktop Navigation Menu -->
-      <nav aria-label="Primary Navigation">
+      <nav id="primary-navigation" aria-label="Primary Navigation">
         <ul class="nav-links">
           <li><a href="index.html" class="nav-link active">Home</a></li>
           <li><a href="services.html" class="nav-link">Services</a></li>
@@ -121,7 +67,7 @@
 
       <!-- Header Action CTA -->
       <div class="header-actions">
-        <a href="contact.html" class="btn-shimmer">
+        <a href="contact.html" class="header-cta">
           <span>Start a Project</span>
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
             stroke-linecap="round" stroke-linejoin="round">
@@ -130,13 +76,14 @@
         </a>
 
         <!-- Mobile Toggle Button -->
-        <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <button class="mobile-toggle" type="button" aria-label="Toggle navigation menu" aria-controls="primary-navigation" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
         </button>
       </div>
 
+      </div>
     </div>
   </header>
 
@@ -162,15 +109,14 @@
 
             <!-- Responsive Headline with clamp() -->
             <h1 class="hero-title fade-in-up delay-1">
-              Autonomous AI Systems<br />
-              &amp; Workflows Built To<br />
-              <span class="text-gradient-electric">Scale Operations.</span>
+              We Build Intelligent Systems That<br />
+              <span class="text-gradient-electric">Eliminate Manual Work.</span>
             </h1>
 
             <!-- Subtitle -->
             <p class="hero-subtitle fade-in-up delay-2">
-              <strong>Clientara AI</strong> builds autonomous systems that run your operations 24/7 — so your team stops
-              doing manual work and starts scaling.
+              We build AI-powered workflows, custom web applications, CRM systems,
+               and intelligent tools that help growing teams work more efficiently.
             </p>
 
             <!-- Action Buttons -->
@@ -213,15 +159,7 @@
 
               <!-- Central AI Quantum Core -->
               <div class="quantum-core">
-                <div class="quantum-core-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-                    stroke-linejoin="round">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                    <path d="M2 17l10 5 10-5"></path>
-                    <path d="M2 12l10 5 10-5"></path>
-                  </svg>
-                </div>
-                <span class="quantum-core-label">AI ENGINE</span>
+                <span class="quantum-core-label">BUSINESS AUTOMATION</span>
               </div>
 
               <!-- Orbit Container: 5 Nodes Orbiting in Continuous Upright Circle (Never Tilted) -->
@@ -312,7 +250,7 @@
     <!-- ==========================================================================
          METRICS / STATS CARDS SECTION — 4 STANDALONE LUXURY GLASS CARDS
          ========================================================================== -->
-    <section class="hero-stats-section">
+    <section class="hero-stats-section" hidden>
       <div class="container">
         <div class="stats-grid">
 
@@ -391,7 +329,7 @@
     <!-- ==========================================================================
          SECTION: SHOWCASE VIDEO (STANDALONE CLEAN SECTION)
          ========================================================================== -->
-    <section class="team-video-section" id="showcase-video">
+    <section class="team-video-section" id="showcase-video" hidden>
       <div class="container">
         <div class="team-video-container">
           <!-- Cyber Glassmorphic Video Player Frame -->
@@ -702,10 +640,10 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         SECTION 3: INDUSTRIES WE AUTOMATE (#industries)
-         ========================================================================== -->
-    <section class="industries-section" id="industries">
+        <!-- ==========================================================================
+          SECTION 3: INDUSTRIES WE AUTOMATE (#industries)
+          ========================================================================== -->
+    <section class="industries-section" id="industries" hidden>
       <div class="container">
 
         <div class="section-header">
@@ -867,10 +805,10 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         SECTION 4: DYNAMIC ROI & TIME SAVINGS CALCULATOR (#calculator)
+        <!-- ==========================================================================
+          SECTION 4: DYNAMIC ROI & TIME SAVINGS CALCULATOR (#calculator)
          ========================================================================== -->
-    <section class="calculator-section" id="calculator">
+    <section class="calculator-section" id="calculator" hidden>
       <div class="container">
 
         <div class="section-header">
@@ -941,8 +879,8 @@
       </div>
     </section>
 
-    <!-- ==========================================================================
-         SECTION 5: 4-STEP TRANSFORMATION ROADMAP (#about / #process)
+        <!-- ==========================================================================
+          SECTION 5: 4-STEP TRANSFORMATION ROADMAP (#about / #process)
          ========================================================================== -->
     <section class="process-section" id="about">
       <div class="container">
@@ -952,9 +890,8 @@
             <span class="section-badge-dot"></span>
             <span>How We Work</span>
           </div>
-          <h2 class="section-title">A 4-Step Roadmap from Manual Chaos to Full Autopilot</h2>
-          <p class="section-subtitle">We handle the entire end-to-end engineering lifecycle from discovery audit to live
-            deployment with zero disruption to your daily operations.</p>
+          <h2 class="section-title">From Business Problem to Working System</h2>
+          <!-- <p class="section-subtitle">We take your business from discovery and planning to a deployed solution built around how your team actually works.</p> -->
         </div>
 
         <div class="process-grid">
@@ -962,61 +899,33 @@
           <div class="process-card">
             <div class="process-step-header">
               <span class="process-num">01</span>
-              <div class="process-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-              </div>
             </div>
-            <h3 class="process-title">Discovery &amp; Free AI Audit</h3>
-            <p class="process-desc">We analyze your existing software stack, map out operational bottlenecks, and
-              identify the highest ROI automation opportunities.</p>
+            <h3 class="process-title">Understand</h3>
+            <p class="process-desc">We learn how your business operates and identify where manual work slows things down.</p>
           </div>
 
           <div class="process-card">
             <div class="process-step-header">
               <span class="process-num">02</span>
-              <div class="process-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                  <polyline points="2 17 12 22 22 17"></polyline>
-                  <polyline points="2 12 12 17 22 12"></polyline>
-                </svg>
-              </div>
             </div>
-            <h3 class="process-title">Architecture Blueprint</h3>
-            <p class="process-desc">We design a custom automation plan tailored exactly to your business logic — mapping
-              out how every system will connect and work together before we build.</p>
+            <h3 class="process-title">Design</h3>
+            <p class="process-desc">We map the workflow, define the system architecture, and choose the right tools.</p>
           </div>
 
           <div class="process-card">
             <div class="process-step-header">
               <span class="process-num">03</span>
-              <div class="process-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
-              </div>
             </div>
-            <h3 class="process-title">Rapid Build &amp; Deployment</h3>
-            <p class="process-desc">We build and thoroughly test every system, then deploy it into your business with
-              zero downtime and no disruption to your daily operations.</p>
+            <h3 class="process-title">Build</h3>
+            <p class="process-desc">We develop, integrate, and test the solution around your actual requirements.</p>
           </div>
 
           <div class="process-card">
             <div class="process-step-header">
               <span class="process-num">04</span>
-              <div class="process-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                </svg>
-              </div>
             </div>
-            <h3 class="process-title">24/7 Monitoring &amp; Scaling</h3>
-            <p class="process-desc">We continuously monitor performance, fine-tune your systems for accuracy, and scale
-              everything as your business grows.</p>
+            <h3 class="process-title">Launch &amp; Improve</h3>
+            <p class="process-desc">We deploy the system, document it, and support improvements as your needs evolve.</p>
           </div>
 
         </div>
@@ -1153,16 +1062,14 @@
   </main>
 
   <!-- ==========================================================================
-       ENTERPRISE LUXURY FOOTER
+       MINIMAL MODERN FOOTER
        ========================================================================== -->
-  <footer class="site-footer">
-    <div class="container">
-
-      <div class="footer-grid">
+  <footer class="main-footer">
+    <div class="footer-grid">
 
         <!-- Brand Column -->
         <div class="footer-brand">
-          <a href="#" class="brand-logo" aria-label="Clientara AI">
+          <a href="index.html" class="brand-logo" aria-label="Clientara AI">
             <div class="logo-symbol">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                 <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
@@ -1175,48 +1082,9 @@
             </div>
           </a>
           <p class="footer-desc">
-            Deploying autonomous AI agents, workflow automation pipelines, and custom software systems that eliminate
-            manual bottlenecks for high-growth businesses.
+            Autonomous AI systems that eliminate manual work and scale your operations.
           </p>
-          <div class="footer-beacon-status">
-            <span class="status-dot"></span>
-            <span>SYSTEMS ONLINE (99.98% UPTIME)</span>
-          </div>
-        </div>
-
-        <!-- Column 2: Services -->
-        <div>
-          <h4 class="footer-col-title">Services</h4>
-          <ul class="footer-links-list">
-            <li><a href="services.html#service-agents" class="footer-link">Autonomous AI Agents</a></li>
-            <li><a href="services.html#service-workflows" class="footer-link">Workflow Automation</a></li>
-            <li><a href="services.html#service-crm" class="footer-link">Custom CRM Systems</a></li>
-            <li><a href="services.html#service-webapps" class="footer-link">Full-Stack Web Apps</a></li>
-            <li><a href="services.html#service-chatbots" class="footer-link">24/7 Smart Chatbots</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 3: Our Company -->
-        <div>
-          <h4 class="footer-col-title">Our Company</h4>
-          <ul class="footer-links-list">
-            <li><a href="work.html" class="footer-link">Case Studies</a></li>
-            <li><a href="about.html" class="footer-link">About Us</a></li>
-            <li><a href="contact.html" class="footer-link">Contact Us</a></li>
-            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
-            <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
-          </ul>
-        </div>
-
-        <!-- Column 4: Connect -->
-        <div>
-          <h4 class="footer-col-title">Connect</h4>
-          <p style="font-size:12.5px; color:var(--text-muted); margin-bottom:12px;">Let's build your enterprise
-            automation infrastructure.</p>
-          <a href="contact.html" class="btn-secondary" style="font-size:11.5px; padding:7px 16px;">
-            <span>Book Strategy Call</span>
-          </a>
-          <div class="footer-social-row" style="margin-top: 14px;">
+          <div class="footer-social-row">
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="LinkedIn">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
@@ -1239,17 +1107,40 @@
           </div>
         </div>
 
+        <!-- Services Column -->
+        <div>
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links-list">
+            <li><a href="services.html#service-agents" class="footer-link">Autonomous AI Agents</a></li>
+            <li><a href="services.html#service-workflows" class="footer-link">Workflow Automation</a></li>
+            <li><a href="services.html#service-crm" class="footer-link">Custom CRM Systems</a></li>
+            <li><a href="services.html#service-webapps" class="footer-link">Full-Stack Web Apps</a></li>
+            <li><a href="services.html#service-chatbots" class="footer-link">24/7 Smart Chatbots</a></li>
+          </ul>
+        </div>
+
+        <!-- Our Company Column -->
+        <div>
+          <h4 class="footer-col-title">Our Company</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+            <li><a href="terms.html" class="footer-link">Terms of Service</a></li>
+          </ul>
+        </div>
+
       </div>
 
       <!-- Footer Bottom Bar -->
       <div class="footer-bottom-bar">
-        <span>&copy; 2026 Clientara AI Inc. All rights reserved.</span>
-        <span>Enterprise AI Automation &amp; Intelligent Workflow Architecture.</span>
+        <div class="footer-copyright">
+          &copy; 2026 Clientara AI Inc. All rights reserved.
+        </div>
       </div>
 
     </div>
   </footer>
-
 
   <!-- ==========================================================================
        SIDE FLOATING WHATSAPP BUTTON (DIRECT CHAT: +92 318 0404335)

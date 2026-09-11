@@ -41,57 +41,54 @@ function initClientaraApp() {
     });
 
     // Mobile Menu Toggle & Drawer
-    const mobileToggles = document.querySelectorAll('.mobile-toggle');
+    const mobileToggle = document.querySelector('.mobile-toggle');
     const navMenu = document.querySelector('.nav-links');
     const headerEl = document.querySelector('.main-header');
 
-    if (mobileToggles.length > 0 && navMenu) {
-      mobileToggles.forEach((toggle) => {
-        toggle.addEventListener('click', (e) => {
-          e.stopPropagation();
-          const isOpen = navMenu.classList.contains('is-open');
-          if (isOpen) {
-            navMenu.classList.remove('is-open');
-            toggle.classList.remove('is-active');
-            toggle.setAttribute('aria-expanded', 'false');
-          } else {
-            navMenu.classList.add('is-open');
-            toggle.classList.add('is-active');
-            toggle.setAttribute('aria-expanded', 'true');
-          }
-        });
+    if (mobileToggle && navMenu && headerEl) {
+      const closeMenu = (restoreFocus = false) => {
+        navMenu.classList.remove('is-open');
+        mobileToggle.classList.remove('is-active');
+        mobileToggle.setAttribute('aria-expanded', 'false');
+
+        if (restoreFocus) {
+          mobileToggle.focus();
+        }
+      };
+
+      const openMenu = () => {
+        navMenu.classList.add('is-open');
+        mobileToggle.classList.add('is-active');
+        mobileToggle.setAttribute('aria-expanded', 'true');
+        navMenu.querySelector('a')?.focus();
+      };
+
+      mobileToggle.addEventListener('click', (event) => {
+        event.stopPropagation();
+
+        if (navMenu.classList.contains('is-open')) {
+          closeMenu(true);
+        } else {
+          openMenu();
+        }
       });
 
       // Close mobile menu when clicking any nav link
       navMenu.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-          navMenu.classList.remove('is-open');
-          mobileToggles.forEach((t) => {
-            t.classList.remove('is-active');
-            t.setAttribute('aria-expanded', 'false');
-          });
-        });
+        link.addEventListener('click', () => closeMenu());
       });
 
       // Close mobile menu when clicking outside
       document.addEventListener('click', (e) => {
         if (navMenu.classList.contains('is-open') && !headerEl?.contains(e.target)) {
-          navMenu.classList.remove('is-open');
-          mobileToggles.forEach((t) => {
-            t.classList.remove('is-active');
-            t.setAttribute('aria-expanded', 'false');
-          });
+          closeMenu();
         }
       });
 
       // Close mobile menu on Escape key
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && navMenu.classList.contains('is-open')) {
-          navMenu.classList.remove('is-open');
-          mobileToggles.forEach((t) => {
-            t.classList.remove('is-active');
-            t.setAttribute('aria-expanded', 'false');
-          });
+          closeMenu(true);
         }
       });
     }
@@ -882,34 +879,6 @@ function initClientaraApp() {
     }
   } catch (err) {
     console.error('Contact Form init error:', err);
-  }
-
-  // ==========================================================================
-  // 12. CINEMATIC 3D STARTUP SPLASH SCREEN (SHOW ONLY ONCE PER SESSION)
-  // ==========================================================================
-  try {
-    const splashScreen = document.getElementById('splashScreen');
-    if (splashScreen) {
-      const hasShownSplash = sessionStorage.getItem('clientara_splash_shown');
-      if (hasShownSplash) {
-        splashScreen.style.display = 'none';
-        document.body.style.overflow = '';
-      } else {
-        sessionStorage.setItem('clientara_splash_shown', 'true');
-        document.body.style.overflow = 'hidden';
-
-        setTimeout(() => {
-          splashScreen.classList.add('splash-hidden');
-          document.body.style.overflow = '';
-
-          setTimeout(() => {
-            splashScreen.style.display = 'none';
-          }, 750);
-        }, 2800);
-      }
-    }
-  } catch (err) {
-    console.error('Splash Screen init error:', err);
   }
 
   // ==========================================================================
