@@ -372,7 +372,7 @@ button {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 9px 20px;
+  padding: 9px 14px;
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
@@ -583,13 +583,13 @@ button {
 }
 
 .btn-hero-primary {
-  padding: 12px 26px;
+  padding: 10px 22px;
   font-size: 13px;
   font-weight: 700;
 }
 
 .btn-hero-secondary {
-  padding: 12px 22px;
+  padding: 10px 22px;
   font-size: 13px;
   font-weight: 600;
 }
@@ -1333,54 +1333,149 @@ button {
   object-fit: contain;
 }
 
-/* ==========================================================================
-   SECTION 2: CORE SERVICES SHOWCASE — UNIFIED TEAL THEME & BALANCED GRID
+/* ========================================================================== 
+  SERVICES SHOWCASE — UNIFIED TEAL THEME & BALANCED GRID
    ========================================================================== */
 
-.services-section {
+.page-section {
   position: relative;
-  padding: 85px 0;
+  padding: 40px 0;
   z-index: 10;
 }
 
-.services-grid-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  width: 100%;
+.services-index-header {
+  max-width: 760px;
+  margin-bottom: 42px;
 }
 
-/* Top Row: 3 Equal-Width Columns */
-.services-grid-top {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  width: 100%;
-}
-
-/* Bottom Row: 2 Equal-Width Columns, Elegantly Centered */
-.services-grid-bottom {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  width: 100%;
-  max-width: 880px;
+.service-index-list {
+  width: min(1100px, calc(100% - 40px));
   margin: 0 auto;
+}
+
+.service-index-row {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 18px;
+  min-height: 104px;
+  padding: 18px 18px 16px 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.service-index-row--featured {
+  margin-top: 10px;
+  background: linear-gradient(90deg, rgba(0, 212, 255, 0.06), rgba(0, 212, 255, 0.02) 52%, transparent 100%);
+  border: 1px solid rgba(0, 212, 255, 0.16);
+  border-radius: 18px 18px 0 0;
+  padding-left: 20px;
+}
+
+.service-index-row:hover {
+  background: rgba(10, 18, 34, 0.7);
+  border-color: rgba(0, 212, 255, 0.24);
+}
+
+.service-index-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: rgba(103, 223, 255, 0.9);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  padding-top: 6px;
+}
+
+.service-index-copy {
+  min-width: 0;
+  padding-right: 24px;
+}
+
+.service-index-copy h3 {
+  margin: 0 0 8px;
+  color: var(--text-primary);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  line-height: 1.18;
+  letter-spacing: -0.05em;
+  font-weight: 700;
+}
+
+.service-index-copy p {
+  max-width: 760px;
+  margin: 0;
+  color: rgba(230, 236, 248, 0.8);
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+
+.service-index-cta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 4px;
+}
+
+.service-index-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: var(--cyan-accent);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color var(--transition-fast), gap var(--transition-fast), opacity var(--transition-fast);
+}
+
+.service-index-link span {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.service-index-link:hover {
+  gap: 10px;
+  color: #ffffff;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.services-grid-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  width: 100%;
 }
 
 .service-card {
   position: relative;
-  background: rgba(8, 13, 32, 0.78);
+  min-width: 0;
+  background: rgba(8, 13, 32, 0.64);
   border: 1px solid rgba(255, 255, 255, 0.09);
-  border-radius: var(--radius-xl);
-  padding: 32px 28px;
+  border-radius: 16px;
+  padding: 24px 24px 20px;
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 16px 36px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  transition: all var(--transition-normal);
+  box-shadow: 0 12px 28px -16px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   overflow: hidden;
   height: 100%;
 }
@@ -1399,14 +1494,20 @@ button {
 }
 
 .service-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   border-color: rgba(30, 200, 165, 0.45);
-  box-shadow: 0 24px 50px -15px rgba(30, 200, 165, 0.22), 0 0 25px rgba(30, 200, 165, 0.12);
+  box-shadow: 0 18px 34px -18px rgba(30, 200, 165, 0.3), 0 0 20px rgba(30, 200, 165, 0.1);
   background: rgba(12, 19, 48, 0.92);
 }
 
 .service-card:hover::before {
   opacity: 1;
+}
+
+.service-card:nth-child(5) {
+  grid-column: 1 / -1;
+  width: calc(50% - 9px);
+  margin: 0 auto;
 }
 
 .service-card-top {
@@ -1419,13 +1520,13 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .service-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
   background: rgba(30, 200, 165, 0.14);
   border: 1px solid rgba(30, 200, 165, 0.32);
   color: var(--teal-accent);
@@ -1441,15 +1542,15 @@ button {
 }
 
 .service-icon svg {
-  width: 22px;
-  height: 22px;
+  width: 19px;
+  height: 19px;
 }
 
 .service-tag {
   font-family: var(--font-mono);
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
-  padding: 4px 10px;
+  padding: 4px 8px;
   border-radius: var(--radius-full);
   letter-spacing: 0.05em;
   background: rgba(30, 200, 165, 0.12);
@@ -1458,50 +1559,46 @@ button {
 }
 
 .service-title {
-  font-size: 20px;
+  font-size: 19px;
   font-weight: 800;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   letter-spacing: -0.025em;
   color: #ffffff;
   line-height: 1.25;
 }
 
 .service-desc {
-  font-size: 13.5px;
+  max-width: 440px;
+  font-size: 13px;
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
 }
 
 .service-checklist {
   list-style: none;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 18px;
 }
 
 .service-check-item {
-  display: flex;
+  display: inline-flex;
   align-items: flex-start;
-  gap: 10px;
-  font-size: 12.5px;
-  color: var(--text-primary);
-  font-weight: 500;
-  line-height: 1.45;
+  padding: 4px 7px;
+  border: 1px solid rgba(0, 212, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(0, 212, 255, 0.06);
+  color: var(--text-secondary);
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .check-icon {
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
-  background: rgba(30, 200, 165, 0.14);
-  color: var(--teal-accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  margin-top: 1px;
+  display: none;
 }
 
 .check-icon svg {
@@ -1510,7 +1607,8 @@ button {
 }
 
 .service-footer-action {
-  padding-top: 16px;
+  margin-top: auto;
+  padding-top: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -1518,7 +1616,7 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 12.5px;
+  font-size: 10px;
   font-weight: 700;
   color: var(--teal-accent);
   text-transform: uppercase;
@@ -1531,12 +1629,12 @@ button {
   color: #ffffff;
 }
 
-/* ==========================================================================
-   SECTION 3: INTERACTIVE AUTOMATION ENGINE VISUALIZER (#engine)
+/* ========================================================================== 
+  INTERACTIVE AUTOMATION ENGINE VISUALIZER (#engine)
    ========================================================================== */
 
-/* ==========================================================================
-   SECTION 3: MASTER-DETAIL 3D INDUSTRIES WE AUTOMATE (#industries)
+/* ========================================================================== 
+  MASTER-DETAIL 3D INDUSTRIES WE AUTOMATE (#industries)
    ========================================================================== */
 
 .industries-section {
@@ -1881,8 +1979,8 @@ button {
   line-height: 1;
 }
 
-/* ==========================================================================
-   SECTION 4: DYNAMIC ROI & TIME SAVINGS CALCULATOR (#calculator)
+/* ========================================================================== 
+  DYNAMIC ROI & TIME SAVINGS CALCULATOR (#calculator)
    ========================================================================== */
 
 .calculator-section {
@@ -2016,15 +2114,9 @@ button {
   -webkit-text-fill-color: transparent;
 }
 
-/* ==========================================================================
-   SECTION 5: 4-STEP TRANSFORMATION ROADMAP (#about / #process)
+/* ========================================================================== 
+  HOW WE WORK PROCESS (#process)
    ========================================================================== */
-
-.process-section {
-  position: relative;
-  padding: 72px 0 82px;
-  z-index: 10;
-}
 
 .process-grid {
   width: min(100%, 1240px);
@@ -2298,8 +2390,8 @@ button {
   }
 }
 
-/* ==========================================================================
-   SECTION 6: CLIENT RESULTS CONTINUOUS HORIZONTAL MARQUEE (#work)
+/* ========================================================================== 
+  CLIENT RESULTS CONTINUOUS HORIZONTAL MARQUEE (#work)
    ========================================================================== */
 
 .work-section {
@@ -2508,15 +2600,9 @@ button {
   flex-shrink: 0;
 }
 
-/* ==========================================================================
-   SECTION 7: INTERACTIVE FAQ ACCORDION (#faq)
+/* ========================================================================== 
+  INTERACTIVE FAQ ACCORDION (#faq)
    ========================================================================== */
-
-.faq-section {
-  position: relative;
-  padding: 85px 0;
-  z-index: 10;
-}
 
 .faq-container {
   max-width: 840px;
@@ -2595,8 +2681,8 @@ button {
   line-height: 1.65;
 }
 
-/* ==========================================================================
-   SECTION 8: START YOUR TRANSFORMATION CTA (#contact)
+/* ========================================================================== 
+  START YOUR TRANSFORMATION CTA (#transformation-cta)
    ========================================================================== */
 
 .transformation-section {
@@ -2887,7 +2973,7 @@ button {
   grid-template-columns: 1.5fr 0.9fr 0.9fr;
   gap: 40px;
   margin-bottom: 40px;
-  max-width: 1200px;
+  max-width: 90%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 24px;
@@ -3184,9 +3270,9 @@ button {
   height: 13px;
 }
 
-/* ==========================================================================
-   SERVICES PAGE: HERO SECTION (2-COLUMN & 3D CYBER ANIMATION)
-   ========================================================================== */
+/* ========================================================================== 
+  SERVICES PAGE: HERO SECTION
+  ========================================================================== */
 
 .services-hero-section {
   position: relative;
@@ -3195,50 +3281,45 @@ button {
   overflow: hidden;
 }
 
-.services-hero-grid-2col {
+.services-hero-content {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
-  margin-bottom: 45px;
+  margin-bottom: 15px;
 }
 
 .services-hero-left {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
   position: relative;
   z-index: 5;
 }
 
 .services-hero-badge {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .services-page-title {
-  font-size: clamp(2.3rem, 4.6vw, 3.5rem);
-  font-weight: 900;
+  font-size: clamp(2.5rem, 3.8vw, 3.45rem);
+  font-weight: 800;
   color: #ffffff;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  margin-bottom: 18px;
-  text-shadow: 0 4px 25px rgba(0, 0, 0, 0.7);
-}
-
-.services-gradient-text {
-  background: linear-gradient(135deg, #00d4ff 0%, #38bdf8 35%, #818cf8 70%, #a855f7 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 30px rgba(0, 212, 255, 0.4));
+  line-height: 1.07;
+  letter-spacing: -0.035em;
+  margin: 0 0 18px;
+  max-width: 920px;
+  word-wrap: break-word;
 }
 
 .services-page-subtitle {
-  font-size: clamp(0.95rem, 1.8vw, 1.12rem);
+  font-size: clamp(1rem, 1.2vw, 1.05rem);
   color: var(--text-secondary);
-  line-height: 1.65;
-  max-width: 580px;
-  margin-bottom: 28px;
+  line-height: 1.55;
+  max-width: 570px;
+  margin: 0;
 }
 
 .services-hero-metrics {
@@ -6342,17 +6423,12 @@ button {
     gap: 16px;
   }
 
-  .services-grid-top {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+  .services-grid-wrapper {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .services-grid-bottom {
-    gap: 18px;
-    max-width: 780px;
-  }
 
-  .services-hero-grid-2col,
+  .services-hero-content,
   .pillar-grid {
     gap: 32px;
   }
@@ -6494,7 +6570,7 @@ button {
     min-height: 400px;
   }
 
-  .services-hero-grid-2col {
+  .services-hero-content {
     grid-template-columns: 1fr;
     gap: 36px;
   }
@@ -6531,15 +6607,6 @@ button {
   .tech-telemetry-bar {
     grid-template-columns: repeat(2, 1fr);
     gap: 14px;
-  }
-
-  .services-grid-top {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .services-grid-bottom {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 100%;
   }
 
   .case-grid {
@@ -6615,6 +6682,65 @@ button {
 }
 
 @media (max-width: 768px) {
+  .service-index-list {
+    width: 100%;
+  }
+
+  .service-index-row {
+    grid-template-columns: 30px minmax(0, 1fr);
+    gap: 12px;
+    min-height: 0;
+    padding: 20px 16px 18px;
+  }
+
+  .service-index-row:hover {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .service-index-row--featured {
+    padding-left: 16px;
+  }
+
+  .service-index-number {
+    align-items: flex-start;
+    padding-top: 5px;
+    font-size: 11px;
+  }
+
+  .service-index-copy {
+    padding-right: 0;
+  }
+
+  .service-index-copy h3 {
+    margin-bottom: 8px;
+    font-size: clamp(1.15rem, 5.5vw, 1.5rem);
+    line-height: 1.2;
+  }
+
+  .service-index-copy p {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .service-index-cta {
+    grid-column: 2;
+    justify-content: flex-start;
+    padding-top: 4px;
+  }
+
+  .service-index-link {
+    justify-self: start;
+  }
+
+  .services-grid-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card:nth-child(5) {
+    width: 100%;
+  }
+
   .industry-sidebar-nav {
     display: flex;
     flex-direction: row;
@@ -6693,7 +6819,7 @@ button {
   }
 
   .hero-section {
-    padding-top: 68px;
+    padding-top: 88px;
     padding-bottom: 20px;
   }
 
@@ -6785,11 +6911,13 @@ button {
   }
 
   .stats-grid,
-  .services-grid-top,
-  .services-grid-bottom,
   .process-grid {
     grid-template-columns: 1fr;
     gap: 14px;
+  }
+
+  .services-grid-wrapper {
+    grid-template-columns: 1fr;
   }
 
   .process-card {

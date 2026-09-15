@@ -149,7 +149,7 @@
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(22px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -158,11 +158,21 @@
 }
 
 .fade-in-up {
-  animation: fadeInUp 0.7s var(--ease-out) forwards;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.95s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
-.delay-1 { animation-delay: 0.1s; }
-.delay-2 { animation-delay: 0.2s; }
-.delay-3 { animation-delay: 0.3s; }
-.delay-4 { animation-delay: 0.4s; }
-.delay-5 { animation-delay: 0.5s; }
+.delay-1 { animation-delay: 0.16s; }
+.delay-2 { animation-delay: 0.32s; }
+.delay-3 { animation-delay: 0.48s; }
+.delay-4 { animation-delay: 0.64s; }
+.delay-5 { animation-delay: 0.8s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}

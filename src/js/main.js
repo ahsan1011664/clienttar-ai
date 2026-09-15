@@ -40,6 +40,28 @@ function initClientaraApp() {
       });
     });
 
+    // Scroll Reveal for service list entries
+    const revealItems = document.querySelectorAll('.reveal-on-scroll');
+    if (revealItems.length) {
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.12,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealItems.forEach((item) => revealObserver.observe(item));
+      } else {
+        revealItems.forEach((item) => item.classList.add('is-visible'));
+      }
+    }
+
     // Mobile Menu Toggle & Drawer
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navMenu = document.querySelector('.nav-links');
@@ -227,7 +249,7 @@ function initClientaraApp() {
   }
 
   // ==========================================================================
-  // 4. DYNAMIC ROI CALCULATOR
+  // Optional ROI calculator (only active when an unhidden calculator exists)
   // ==========================================================================
   try {
     const teamSlider = document.getElementById('teamSizeSlider');
@@ -265,7 +287,8 @@ function initClientaraApp() {
       if (roiMultipleNum) roiMultipleNum.textContent = `${roiMultiple}x ROI`;
     };
 
-    if (teamSlider && hoursSlider && rateSlider) {
+    const calculatorSection = document.querySelector('.calculator-section');
+    if (teamSlider && hoursSlider && rateSlider && calculatorSection && !calculatorSection.hidden) {
       teamSlider.addEventListener('input', updateRoiCalculations);
       teamSlider.addEventListener('change', updateRoiCalculations);
       hoursSlider.addEventListener('input', updateRoiCalculations);
@@ -279,7 +302,7 @@ function initClientaraApp() {
   }
 
   // ==========================================================================
-  // 6. INTERACTIVE FAQ ACCORDION
+  // FAQ accordion
   // ==========================================================================
   try {
     const faqItems = document.querySelectorAll('.faq-item');
@@ -298,7 +321,7 @@ function initClientaraApp() {
   }
 
   // ==========================================================================
-  // 7. 3D INDUSTRIES SHOWCASE ENGINE
+  // Optional Industries showcase (only active when an unhidden section exists)
   // ==========================================================================
   try {
     const industriesData = [
@@ -504,7 +527,8 @@ function initClientaraApp() {
       }, 120);
     };
 
-    if (industryTabBtns.length > 0) {
+    const industriesSection = document.querySelector('.industries-section');
+    if (industryTabBtns.length > 0 && industriesSection && !industriesSection.hidden) {
       industryTabBtns.forEach((btn, i) => {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
@@ -539,7 +563,7 @@ function initClientaraApp() {
   }
 
   // ==========================================================================
-  // 8. SERVICES PAGE FILTER TABS & 3D PARALLAX STAGE
+  // Services page filter tabs and 3D stage
   // ==========================================================================
   try {
     const serviceFilterBtns = document.querySelectorAll('.service-filter-btn');
@@ -882,7 +906,7 @@ function initClientaraApp() {
   }
 
   // ==========================================================================
-  // 13. SHOWCASE VIDEO CONTROLLER (PLAY ONCE, CLICK TO REPLAY, SCROLL AUTO-PAUSE)
+  // Optional showcase video controller (only active when an unhidden video exists)
   // ==========================================================================
   try {
     const realTeamVideo = document.getElementById('realTeamVideo');
@@ -894,7 +918,8 @@ function initClientaraApp() {
     const iconMuted = document.getElementById('iconMuted');
     const iconUnmuted = document.getElementById('iconUnmuted');
 
-    if (realTeamVideo) {
+    const videoSection = document.querySelector('.team-video-section');
+    if (realTeamVideo && videoSection && !videoSection.hidden) {
       // Helper: sync UI states
       const syncPlayState = (isPlaying) => {
         if (iconPause && iconPlay) {
