@@ -8649,22 +8649,27 @@ html.splash-already-shown .splash-screen {
 }
 
 /* Bento Grid Spans */
+.bento-card--agents,
 .bento-card--voice {
   grid-column: span 2;
 }
 
+.bento-card--workflow,
 .bento-card--automation {
   grid-column: span 4;
 }
 
+.bento-card--crm,
 .bento-card--web {
   grid-column: span 2;
 }
 
+.bento-card--software,
 .bento-card--uiux {
   grid-column: span 2;
 }
 
+.bento-card--chatbots,
 .bento-card--app {
   grid-column: span 2;
 }
@@ -8685,25 +8690,47 @@ html.splash-already-shown .splash-screen {
 }
 
 /* --------------------------------------------------------------------------
-   CARD 1: AI VOICE AGENT STAGE
+   CARD 1: AI AGENTS & INTELLIGENT ASSISTANTS STAGE
    -------------------------------------------------------------------------- */
+.stage-agents,
 .stage-voice {
-  background: radial-gradient(circle at 50% 40%, rgba(255, 94, 58, 0.12), rgba(5, 9, 24, 0.8) 75%);
+  background: radial-gradient(circle at 50% 40%, rgba(0, 212, 255, 0.16), rgba(139, 92, 246, 0.1) 45%, rgba(5, 9, 24, 0.85) 75%);
 }
 
+.agent-ambient-glow,
 .voice-ambient-glow {
   position: absolute;
-  width: 140px;
-  height: 140px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 94, 58, 0.35) 0%, rgba(255, 192, 72, 0.15) 50%, transparent 80%);
-  filter: blur(24px);
+  background: radial-gradient(circle, rgba(0, 212, 255, 0.4) 0%, rgba(139, 92, 246, 0.2) 50%, transparent 80%);
+  filter: blur(26px);
   pointer-events: none;
 }
 
+.agent-orb-wrapper,
 .voice-orb-wrapper {
   position: relative;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
+}
+
+.agent-orb {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff 0%, #00d4ff 45%, #0066ff 75%, #4f46e5 100%);
+  box-shadow: 0 0 35px rgba(0, 212, 255, 0.75), 0 0 65px rgba(139, 92, 246, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: agentOrbFloat 3.5s ease-in-out infinite alternate;
+}
+
+.agent-orb-inner {
+  width: 82%;
+  height: 82%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.85), transparent 65%);
 }
 
 .voice-orb {
@@ -8725,22 +8752,33 @@ html.splash-already-shown .splash-screen {
   background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.6), transparent 60%);
 }
 
+@keyframes agentOrbFloat {
+  0% { transform: translateY(0) scale(0.98); box-shadow: 0 0 28px rgba(0, 212, 255, 0.55); }
+  100% { transform: translateY(-6px) scale(1.05); box-shadow: 0 0 48px rgba(0, 212, 255, 0.9); }
+}
+
 @keyframes voiceOrbFloat {
   0% { transform: translateY(0) scale(0.98); box-shadow: 0 0 28px rgba(255, 94, 58, 0.5); }
   100% { transform: translateY(-6px) scale(1.04); box-shadow: 0 0 45px rgba(255, 94, 58, 0.85); }
 }
 
+.agent-status-pill,
 .voice-status-pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
   font-family: var(--font-heading);
-  font-size: 12.5px;
+  font-size: 11.5px;
   font-weight: 600;
   color: #e2e8f0;
-  margin-bottom: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 10px;
 }
 
+.agent-status-dot,
 .voice-status-dot {
   width: 7px;
   height: 7px;
@@ -8748,6 +8786,29 @@ html.splash-already-shown .splash-screen {
   background: #10b981;
   box-shadow: 0 0 8px #10b981;
   animation: pulse-emerald 1.8s infinite;
+}
+
+.agent-chips-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.agent-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(14, 24, 56, 0.85);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  font-size: 9.5px;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+.agent-chip svg {
+  color: #00d4ff;
 }
 
 .voice-soundwave {
@@ -8759,7 +8820,7 @@ html.splash-already-shown .splash-screen {
 
 .wave-bar {
   width: 3.5px;
-  background: linear-gradient(180deg, #ffc048 0%, #ff5e3a 100%);
+  background: linear-gradient(180deg, #00d4ff 0%, #0066ff 100%);
   border-radius: 4px;
   animation: waveBarPulse 1.2s ease-in-out infinite alternate;
 }
@@ -8780,10 +8841,11 @@ html.splash-already-shown .splash-screen {
 }
 
 /* --------------------------------------------------------------------------
-   CARD 2: AI AUTOMATION WORKFLOW CANVAS
+   CARD 2: WORKFLOW AUTOMATION & INTEGRATIONS CANVAS
    -------------------------------------------------------------------------- */
+.stage-workflow,
 .stage-automation {
-  background: radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.08), rgba(4, 8, 22, 0.95) 85%);
+  background: radial-gradient(circle at 50% 50%, rgba(0, 102, 255, 0.1), rgba(4, 8, 22, 0.95) 85%);
   padding: 18px 24px;
 }
 
@@ -8935,15 +8997,16 @@ html.splash-already-shown .splash-screen {
 }
 
 /* --------------------------------------------------------------------------
-   CARD 3: WEB DEVELOPMENT DESKTOP MOCKUP
+   CARD 3: CRM & SALES SYSTEMS DESKTOP MOCKUP
    -------------------------------------------------------------------------- */
+.stage-crm,
 .stage-web {
-  background: radial-gradient(circle at 50% 60%, rgba(0, 212, 255, 0.08), rgba(4, 8, 22, 0.9) 80%);
+  background: radial-gradient(circle at 50% 60%, rgba(0, 212, 255, 0.1), rgba(4, 8, 22, 0.9) 80%);
 }
 
 .desktop-mockup {
-  width: 90%;
-  max-width: 300px;
+  width: 92%;
+  max-width: 310px;
   background: rgba(9, 16, 40, 0.95);
   border: 1px solid rgba(0, 212, 255, 0.3);
   border-radius: 12px;
@@ -9073,10 +9136,11 @@ html.splash-already-shown .splash-screen {
 .h-100 { height: 100%; }
 
 /* --------------------------------------------------------------------------
-   CARD 4: UI/UX DESIGN STAGE
+   CARD 4: CUSTOM BUSINESS SOFTWARE STAGE
    -------------------------------------------------------------------------- */
+.stage-software,
 .stage-uiux {
-  background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.1), rgba(4, 8, 22, 0.9) 80%);
+  background: radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.12), rgba(4, 8, 22, 0.9) 80%);
 }
 
 .uiux-floating-wrap {
@@ -9247,15 +9311,16 @@ html.splash-already-shown .splash-screen {
 }
 
 /* --------------------------------------------------------------------------
-   CARD 5: APP DEVELOPMENT PHONE MOCKUP
+   CARD 5: AI CHATBOTS & CUSTOMER ASSISTANTS PHONE MOCKUP
    -------------------------------------------------------------------------- */
+.stage-chatbots,
 .stage-app {
-  background: radial-gradient(circle at 50% 60%, rgba(16, 185, 129, 0.08), rgba(4, 8, 22, 0.9) 80%);
+  background: radial-gradient(circle at 50% 60%, rgba(16, 185, 129, 0.1), rgba(4, 8, 22, 0.9) 80%);
 }
 
 .phone-mockup {
-  width: 140px;
-  height: 175px;
+  width: 145px;
+  height: 180px;
   background: #02050f;
   border: 2px solid rgba(255, 255, 255, 0.16);
   border-radius: 20px;
@@ -9322,7 +9387,7 @@ html.splash-already-shown .splash-screen {
 }
 
 .phone-app-title {
-  font-size: 9px;
+  font-size: 8.5px;
   font-weight: 800;
   color: #ffffff;
 }
@@ -9410,12 +9475,30 @@ html.splash-already-shown .splash-screen {
   flex-grow: 1;
 }
 
+.bento-num-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono, monospace);
+  font-size: 11px;
+  font-weight: 800;
+  color: #00d4ff;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.28);
+  padding: 2px 7px;
+  border-radius: 5px;
+  width: fit-content;
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+}
+
 .bento-card-title {
   font-size: 19px;
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 8px;
   letter-spacing: -0.02em;
+  line-height: 1.3;
 }
 
 .bento-card-desc {
@@ -9458,18 +9541,23 @@ html.splash-already-shown .splash-screen {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+  .bento-card--agents,
   .bento-card--voice {
     grid-column: span 1;
   }
+  .bento-card--workflow,
   .bento-card--automation {
     grid-column: span 1;
   }
+  .bento-card--crm,
   .bento-card--web {
     grid-column: span 1;
   }
+  .bento-card--software,
   .bento-card--uiux {
     grid-column: span 1;
   }
+  .bento-card--chatbots,
   .bento-card--app {
     grid-column: span 2;
   }
@@ -9483,10 +9571,15 @@ html.splash-already-shown .splash-screen {
     grid-template-columns: 1fr;
     gap: 18px;
   }
+  .bento-card--agents,
   .bento-card--voice,
+  .bento-card--workflow,
   .bento-card--automation,
+  .bento-card--crm,
   .bento-card--web,
+  .bento-card--software,
   .bento-card--uiux,
+  .bento-card--chatbots,
   .bento-card--app {
     grid-column: span 1;
     width: 100%;
